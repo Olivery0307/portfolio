@@ -1,4 +1,4 @@
-** [Chung-Yeh Yang's Portfolio Website](https://olivery0307.github.io/portfolio/) **
+**[Chung-Yeh Yang's Portfolio Website](https://olivery0307.github.io/portfolio/)**
 
 Copyright:
 Massively by HTML5 UP
