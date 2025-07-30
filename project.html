@@ -10,9 +10,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom-enhancements.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
+<body class="is-preload project-page">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
@@ -22,7 +23,7 @@
             <h1>This is<br />
                 Chung-Yeh Yang
             </h1>
-            <p> Aspiring Data Scientist skilled in Data Analysis and Machine Learning.<br />
+            <p> An aspiring ML Engineer and Data Scientist.<br />
                 <a href="https://www.linkedin.com/in/olivery0307" target="_blank">@LinkedIn: Chung-Yeh(Oliver) Yang</a> <br />
             </p>
             <ul class="actions">
@@ -33,8 +34,8 @@
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
-                <li><a href="index.html">About Me</a></li>
-                <li class="active"><a href="project.html">My Projects</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li class="active"><a href="project.html#main">My Projects</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/olivery0307/" target=_blank class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
@@ -44,178 +45,295 @@
 
         <!-- Main -->
         <div id="main">
+            <!-- Top CTA Section -->
+            <div class="cta-section">
+                <h2>Explore My Work</h2>
+                <p>Discover my journey through data science, machine learning, AI, business analytics, and more.</p>
+            </div>
 
             <!-- Posts -->
             <section class="posts">
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/Olivery0307/YouBike_Status_Prediction" target=_blank>YouBike Station Status Prediction </a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/youbike_prediction.jpeg" alt="" /></a>
-                    <p> An personal end-to-end ML project that fetch data from YouBike API, builds a prediction model on the status of YouBikes in Taipei, Taiwan, containerze it on Docker, and deploy it on AWS.
-                        
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/Olivery0307/YouBike_Status_Prediction" target=_blank class="button">View My Project</a></li>
-                    </ul>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/youbike_prediction.jpeg" alt="YouBike Prediction Project" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/YouBike_Status_Prediction" target="_blank">YouBike Station Status Prediction</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon cloud_tools">AWS</span>
+                            <span class="tech-icon development_tools">Docker</span>
+                            <span class="tech-icon methodologies">MLOps</span>
+                        </div>
+                        <p>An end-to-end ML project that fetches data from YouBike API, builds a prediction model on the status of YouBikes in Taipei, Taiwan, containerizes it on Docker, and deploys it on AWS.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/YouBike_Status_Prediction" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        <div class="project-actions">
+                            <a href="https://olivery0307.github.io/YouBike_Status_Prediction/" target="_blank" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i> View Demo
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/Olivery0307/LLM_Consultant" target=_blank>LLM-Powered <br/> Business Consultant </a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/LLM_Consultant.jpeg" alt="" /></a>
-                    <p> A personal project that build a scalable AI business consultant that uses a multi-tool LangChain agent and an asynchronous MLOps backend to deliver on-demand business analysis
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/Olivery0307/LLM_Consultant
-                            " target=_blank class="button">View My Project</a></li>
-                    </ul>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/LLM_Consultant.jpeg" alt="LLM Business Consultant" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/LLM_Consultant" target="_blank">LLM-Powered Business Consultant</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon methodologies">RAG</span>
+                            <span class="tech-icon python_packages">LangChain</span>
+                            <span class="tech-icon methodologies">MLOps</span>
+                        </div>
+                        <p>A scalable AI business consultant that uses a multi-tool LangChain agent and an asynchronous MLOps backend to deliver on-demand business analysis.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/LLM_Consultant" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/Olivery0307/Fusion_Model_for_VQA_verification" target=_blank>VQA Verification with DNN Fusion Model </a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/vqa.jpeg" alt="" /></a>
-                    <p> A project on combining image and texual features to train a deep neural network fusion model on the VQA dataset. The model can be used to verify whether the images, questions and answers are matched correctly.
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/Olivery0307/Fusion_Model_for_VQA_verification" target=_blank class="button">View My Project</a></li>
-                    </ul>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/vqa.jpeg" alt="VQA Verification Project" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Fusion_Model_for_VQA_verification" target="_blank">VQA Verification with DNN Fusion Model</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon python_packages">PyTorch</span>
+                            <span class="tech-icon methodologies">Deep Learning</span>
+                        </div>
+                        <p>A project combining image and textual features to train a deep neural network fusion model on the VQA dataset for verifying image-question-answer matches.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Fusion_Model_for_VQA_verification" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-					<header>
-						<h2><a href="https://github.com/Olivery0307/Artwork_Topic_Modeling" target=_blank>Artwork Topic-Modeling with MLLM</a></h2>
-					</header>
-					<a class="image fit"><img src="images/artwork.jpeg" alt="" /></a>
-					<p> A research project effectively combining topic modeling with large language models (LLM) and multi-modal LLM to analyze artworks. 
-						The combination successfully captures trends and commonalities in artworks.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Olivery0307/Artwork_Topic_Modeling" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
-
-				<article>
-					<header>
-						<h2><a href="https://github.com/Olivery0307/Reset_Air" target=_blank>Reset Air - <br>Air quality Analysis</a></h2>
-					</header>
-					<a class="image fit"><img src="images/air_quality.jpeg" alt="" /></a>
-					<p> An internship project that automates the process of cleansing, analyzing, visualizing, and reporting monitored air quality data 
-                        utilizing multiple Python libraries and applications.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Olivery0307/Reset_Air" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
-
-                <article>
-					<header>
-						<h2><a href="https://github.com/Olivery0307/Reset_Embodied" target=_blank>Reset Embodied - Scoreboard Automation</a></h2>
-					</header>
-					<a class="image fit"><img src="images/reset_embodied.jpeg" alt="" /></a>
-					<p> An internship project that automates the scorecard generation process, streamlining presentation of Reset 
-                        Embodied data, utilizing python-pptx package and a pre-designed PowerPoint template.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Olivery0307/Reset_Embodied" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
-                
-                <article>
-                    <header>
-                        <h2><a href="https://drive.google.com/drive/folders/1p8jlKNtPu1SKsKa9k3DcwALUk0jtJ1ia?usp=sharing" target=_blank>Doubled-Up Homelessness Visualization with Tableau</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/homelessness.jpeg" alt="" /></a>
-                    <p> A group project on Doubled-Up homelessness, the status of people who sharing the housing of others due to economic hardship.
-                        It utilizes SQL queries to transform datasets and create interactive dashboards in Tableau.
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://drive.google.com/drive/folders/1p8jlKNtPu1SKsKa9k3DcwALUk0jtJ1ia?usp=sharing" target=_blank class="button">View My Project</a></li>
-                    </ul>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/artwork.jpeg" alt="Artwork Topic Modeling" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Artwork_Topic_Modeling" target="_blank">Artwork Topic-Modeling with MLLM</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon methodologies">Clustering</span>
+                            <span class="tech-icon python_packages">OpenAI API</span>
+                            <span class="tech-icon methodologies">MLLM</span>
+                            
+                        </div>
+                        <p>A research project effectively combining topic modeling with large languages models (LLM) and multi-modal LLM to analyze artworks and capture trends.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Artwork_Topic_Modeling" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/Olivery0307/Covid-Data-Project" target=_blank>COVID Data Analysis<br />
-                            with Azure and PowerBI
-                        </a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Covid.jpeg" alt="" /></a>
-                    <p> A group project analyzing the trend of COVID-19 cases, deaths and recovery changes
-                        by dates and countries. The process includes data engineering tasks such as data cleansing, querying, and visualization.
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/Olivery0307/Covid-Data-Project" target=_blank class="button">View My Project</a></li>
-                    </ul>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/air_quality.jpeg" alt="Reset Air Quality Analysis" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Reset_Air" target="_blank">Reset Air - Air Quality Analysis</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon python_packages">Pandas, Seaborn</span>
+                            <span class="tech-icon methodologies">Data Analysis</span>
+
+                        </div>
+                        <p>An internship project that automates the process of cleansing, analyzing, visualizing, and reporting monitored air quality data utilizing multiple Python libraries.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Reset_Air" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-				<article>
-					<header>
-						<h2><a href="https://github.com/Olivery0307/Psychologist-Chatbot-with-LLM" target=_blank>Psychologist Chatbot with Large Language Models</a></h2>
-					</header>
-					<a class="image fit"><img src="images/psychologist.jpeg" alt="" /></a>
-					<p> A research project where various LLM techniques, such as Chain of Thought, Tree of Thoughts, and CAMEL are implemented to build chatbots acting as a psychologist and identify 
-						one's Big Five personality traits.
-					</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Olivery0307/Psychologist-Chatbot-with-LLM" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/reset_embodied.jpeg" alt="Reset Embodied Automation" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Reset_Embodied" target="_blank">Reset Embodied - Scoreboard Automation</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon python_packages">Pandas, Python-pptx</span>
+                            <span class="tech-icon methodologies">Data Reporting & Viz</span>
+                        </div>
+                        <p>An internship project that automates the scorecard generation process, streamlining presentation of Reset Embodied data using python-pptx package.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Reset_Embodied" target="_blank" class="project-btn">
+                               <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-				<article>
-					<header>
-						<h2><a href="https://github.com/Olivery0307/Facebook-Network-Analysis" target=_blank> Facebook Network Analysis
-						with Rust</a></h2>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/homelessness.jpeg" alt="Homelessness Visualization" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://drive.google.com/drive/folders/1p8jlKNtPu1SKsKa9k3DcwALUk0jtJ1ia?usp=sharing" target="_blank">Doubled-Up Homelessness Visualization</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">SQL</span>
+                            <span class="tech-icon visualization_tools">Tableau</span>
+                            <span class="tech-icon cloud_tools">Google Big Query</span>
+                        </div>
+                        <p>A group project on Doubled-Up homelessness, analyzing people who share housing due to economic hardship using SQL queries and interactive Tableau dashboards.</p>
+                        <div class="project-actions">
+                            <a href="https://drive.google.com/drive/folders/1p8jlKNtPu1SKsKa9k3DcwALUk0jtJ1ia?usp=sharing" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-					</header>
-					<a class="image fit"><img src="images/Facebook.jpeg" alt="" /></a>
-					<p> An individual project that analyze the degree distribution and
-						six degree of separation of the network of a large FaceBook dataset
-						using Breadth-First-Search(BFS) on "Facebook:Social Circles"
-						via Rust.</p>
-					<ul class="actions special">
-						<li><a href="https://github.com/Olivery0307/Facebook-Network-Analysis" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/Covid.jpeg" alt="COVID Data Analysis" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Covid-Data-Project" target="_blank">COVID-19 Analysis with Azure and PowerBI</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">SQL</span>
+                            <span class="tech-icon visualization_tools">Power BI</span>
+                            <span class="tech-icon cloud_tools">Mircrosoft Azure</span>
+                            
+                        </div>
+                        <p>A group project analyzing COVID-19 trends including cases, deaths, and recovery changes by dates and countries with comprehensive data engineering tasks.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Covid-Data-Project" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-				<article>
-					<header>
-						<h2><a href="https://drive.google.com/drive/folders/1nor9xZl85bnwGqzyjHz3Fmmy9uDbtnEM?usp=sharing"  target=_blank>Ski Ticket Price Analysis <br />
-						with Python</a></h2>
-					</header>
-					<a class="image fit"><img src="images/Ski Resort.jpeg" alt="" /></a>
-					<p>A group project that comprehensively analyze the factors impacting European Ski Resorts' ticket prices
-						and give advice for both tourists for resort selection and resorts for pricing stategies.</p>
-					<ul class="actions special">
-						<li><a href="https://drive.google.com/drive/folders/1nor9xZl85bnwGqzyjHz3Fmmy9uDbtnEM?usp=sharing" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/psychologist.jpeg" alt="Psychologist Chatbot" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Psychologist-Chatbot-with-LLM" target="_blank">Psychologist Chatbot with LLM</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon python_packages">LLM</span>
+                            <span class="tech-icon methodologies">Prompt Engineering</span>
+                        </div>
+                        <p>A research project implementing various LLM techniques like Chain of Thought, Tree of Thoughts, and CAMEL to build chatbots for psychological analysis and Big Five personality traits identification.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Psychologist-Chatbot-with-LLM" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-                <article>
-					<header>
-						<h2><a href="https://docs.google.com/document/d/1nC0YX_dFWYbqwcfufgTNS4yq1Q6IU8b2FcvGYOv9q3M/edit?usp=sharing"  target=_blank>Boston Crime Analysis<br />
-						with R</a></h2>
-					</header>
-					<a class="image fit"><img src="images/Crime.jpeg" alt="" /></a>
-					<p>A group project that delves into the Boston Crime dataset to gain insights on the patterns of crime in Boston. The project includes data cleaning, exploratory data analysis, and visualization.</p>
-					<ul class="actions special">
-						<li><a href="https://docs.google.com/document/d/1nC0YX_dFWYbqwcfufgTNS4yq1Q6IU8b2FcvGYOv9q3M/edit?usp=sharing" target=_blank class="button">View My Project</a></li>
-					</ul>
-				</article>
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/Facebook.jpeg" alt="Facebook Network Analysis" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://github.com/Olivery0307/Facebook-Network-Analysis" target="_blank">Facebook Network Analysis</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Rust</span>
+                            <span class="tech-icon python_packages">BFS</span>
+                            <span class="tech-icon methodologies">Graph Theory</span>
+                        </div>
+                        <p>An individual project analyzing degree distribution and six degrees of separation in a large Facebook dataset using Breadth-First-Search on "Facebook: Social Circles" via Rust.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/Olivery0307/Facebook-Network-Analysis" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/Ski Resort.jpeg" alt="Ski Ticket Analysis" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://drive.google.com/drive/folders/1nor9xZl85bnwGqzyjHz3Fmmy9uDbtnEM?usp=sharing" target="_blank">Ski Ticket Price Analysis with Python</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">Python</span>
+                            <span class="tech-icon python_packages">Pandas, Scikit-learn</span>
+                            <span class="tech-icon methodologies">Machine Learning</span>
+                        </div>
+                        <p>A comprehensive group project analyzing factors impacting European Ski Resorts' ticket prices, providing advice for tourists and pricing strategies for resorts.</p>
+                        <div class="project-actions">
+                            <a href="https://drive.google.com/drive/folders/1nor9xZl85bnwGqzyjHz3Fmmy9uDbtnEM?usp=sharing" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="image">
+                        <img src="images/Crime.jpeg" alt="Boston Crime Analysis" />
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h2><a href="https://docs.google.com/document/d/1nC0YX_dFWYbqwcfufgTNS4yq1Q6IU8b2FcvGYOv9q3M/edit?usp=sharing" target="_blank">Boston Crime Analysis with R</a></h2>
+                        </header>
+                        <div class="tech-stack">
+                            <span class="tech-icon languages">R</span>
+                            <span class="tech-icon python_packages">Hypothesis Testing</span>
+                            <span class="tech-icon methodologies">Data Analysis & Visualization</span>
+                        </div>
+                        <p>A group project delving into the Boston Crime dataset to gain insights on crime patterns in Boston, including comprehensive data cleaning, exploratory analysis, and visualization.</p>
+                        <div class="project-actions">
+                            <a href="https://docs.google.com/document/d/1nC0YX_dFWYbqwcfufgTNS4yq1Q6IU8b2FcvGYOv9q3M/edit?usp=sharing" target="_blank" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </section>
-
-        </div>
 
         <!-- Footer -->
         <footer id="footer">
             <section class="split contact">
                 <section class="alt">
                     <h3>Address</h3>
-                    <p>150 Huntington Ave, Boston, MA 02215
+                    <p>3880 9th Avenue, New York, NY 10034
                     </p>
                 </section>
                 <section>
@@ -229,22 +347,22 @@
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li><a href="https://www.linkedin.com/in/olivery0307/"  target=_blank class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                        <li><a href="https://github.com/Olivery0307" target=_blank class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/olivery0307/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/Olivery0307" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
                     </ul>
                 </section>
             </section>
         </footer>
 
-        <!-- Copyright -->
-        <div id="copyright">
-            <ul>
-                <li>&copy; Chung-Yeh Yang</li>
-                <li>Design: <a href="https://html5up.net"  target=_blank>HTML5 UP</a></li>
-                <li>Project Images: Dall-E 3</li>
-            </ul>
-        </div>
+    </div>
 
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul>
+            <li>&copy; Chung-Yeh Yang</li>
+            <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Project Images: <a href="https://openai.com/dall-e-3" target="_blank">OpenAI Dall-E 3</a>, <a href="https://gemini.google/overview/image-generation/" target="_blank">Gemini Imagen 4</a></li>
+        </ul>
     </div>
 
     <!-- Scripts -->
@@ -255,6 +373,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/portfolio-enhancements.js"></script>
 
 </body>
 </html>
