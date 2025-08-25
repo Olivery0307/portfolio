@@ -45,19 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
             const nextBtn = document.getElementById('nextBtn');
             
             if (prevBtn) {
-                prevBtn.addEventListener('click', function() {
+                prevBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Previous button clicked, current page:', currentPage);
                     if (currentPage > 1) {
+                        console.log('Calling changePage for previous:', currentPage - 1);
                         changePage(currentPage - 1);
+                    } else {
+                        console.log('Already on first page');
                     }
                 });
+                console.log('Previous button event listener added');
             }
             
             if (nextBtn) {
-                nextBtn.addEventListener('click', function() {
+                nextBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Next button clicked, current page:', currentPage);
                     if (currentPage < totalPages) {
+                        console.log('Calling changePage for next:', currentPage + 1);
                         changePage(currentPage + 1);
+                    } else {
+                        console.log('Already on last page');
                     }
                 });
+                console.log('Next button event listener added');
             }
         } else {
             console.error('Posts section not found');
@@ -119,14 +131,44 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(`Changed to page ${currentPage}`);
         showCurrentPage();
         
-        // Smooth scroll to top of posts section
-        const postsSection = document.querySelector('.posts');
-        if (postsSection) {
-            postsSection.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        }
+        // Enhanced scrolling logic that works consistently across all viewport widths
+        setTimeout(() => {
+            // Try multiple targets in order of preference
+            const ctaSection = document.querySelector('.cta-section');
+            const mainSection = document.querySelector('#main');
+            const postsSection = document.querySelector('.posts');
+            
+            let targetElement = ctaSection || mainSection || postsSection;
+            
+            if (targetElement) {
+                console.log('Scrolling to target element via pagination');
+                
+                // Get viewport width to determine scroll behavior
+                const viewportWidth = window.innerWidth;
+                console.log('Viewport width:', viewportWidth);
+                
+                // Use different scroll strategies based on viewport width
+                if (viewportWidth > 1280) {
+                    // For wide screens, scroll to a calculated position
+                    const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementTop - 100; // Add 100px offset from top
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // For narrower screens, use scrollIntoView
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                }
+            } else {
+                console.log('No target element found for pagination scroll');
+            }
+        }, 150); // Increased delay to ensure DOM is ready
     };
     
     // Add keyboard navigation
@@ -138,11 +180,71 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Handle hash changes for direct navigation
+    window.addEventListener('hashchange', function() {
+        if (window.location.hash === '#main') {
+            const ctaSection = document.querySelector('.cta-section');
+            const mainSection = document.querySelector('#main');
+            const targetElement = ctaSection || mainSection;
+            
+            if (targetElement) {
+                console.log('Hash change to #main - scrolling to target');
+                const viewportWidth = window.innerWidth;
+                
+                if (viewportWidth > 1280) {
+                    const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementTop - 100;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                }
+            }
+        }
+    });
+    
     // Initialize pagination if we're on the projects page
     if (window.location.pathname.includes('project.html') || 
         document.querySelector('.posts')) {
         createPagination();
         showCurrentPage();
+        
+        // Handle direct navigation to #main anchor
+        if (window.location.hash === '#main') {
+            setTimeout(() => {
+                const ctaSection = document.querySelector('.cta-section');
+                const mainSection = document.querySelector('#main');
+                const targetElement = ctaSection || mainSection;
+                
+                if (targetElement) {
+                    console.log('Direct navigation to #main - scrolling to target');
+                    const viewportWidth = window.innerWidth;
+                    
+                    if (viewportWidth > 1280) {
+                        const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementTop - 100;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start',
+                            inline: 'nearest'
+                        });
+                    }
+                }
+            }, 500);
+        }
     }
     
     // Add smooth hover effects for project cards

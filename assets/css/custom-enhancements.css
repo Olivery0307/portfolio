@@ -498,7 +498,7 @@
 }
 
 #footer > section.split.contact > section:not(:last-child) {
-    border-bottom: none !important;
+    border-bottom: 1px solid #ddd !important;
 }
 
 #footer > section.split.contact > section h3 {
@@ -507,7 +507,6 @@
     margin-right: 1.5rem !important;
     min-width: 80px !important;
     flex-shrink: 0 !important;
-    text-align: left !important;
 }
 
 #footer > section.split.contact > section p,
